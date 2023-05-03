@@ -1,14 +1,16 @@
 body{
-  background: #6a6a6a;
-}
+  background-image: url(./craft-beer-background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
+}
 .name{
   color: rgb(0, 0, 0);
   text-align: center;
   padding-bottom: 20px;
   font-size:large;
   font-family: 'Press Start 2P', cursive;
-  color: rgb(183, 255, 255);
+  color: rgb(212, 255, 183);
 }
 
 li{
@@ -19,14 +21,14 @@ ul{
   top: 200px;
   margin: 50px auto;
   border-radius: 10px;
-  background-color: #4aaeff8b;
+  background-color: #02530d8b;
   width: 50vw;
   padding:30px;
 }
 
 h1{
   text-align: center;
-  color:#fff;
+  color:#000000;
   font-family: 'Press Start 2P', cursive;
 }
 
