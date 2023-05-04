@@ -14,6 +14,12 @@ const Breweries = (props) => {
           setIsDataLoaded(true);
         });
     }, []);
+
+    if(!isDataLoaded)(
+      <div>
+        <h1>Please wait, data is loading...</h1>
+      </div>
+    );
   
     return (
       <div className="breweries">
