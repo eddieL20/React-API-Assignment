@@ -1,12 +1,12 @@
 import React from "react";
 
-const Breweries = () => {
+const Breweries = (props) => {
     const [items, setItems] = React.useState([]);
     const [isDataLoaded, setIsDataLoaded] = React.useState(false);
-  
+
     React.useEffect(() => {
       fetch(
-        "https://api.openbrewerydb.org/v1/breweries?by_city=san_diego&sort=type"
+        `https://api.openbrewerydb.org/v1/breweries?by_city=${props.city}&sort=type`
       )
         .then((Response) => Response.json())
         .then((json) => {
@@ -16,8 +16,7 @@ const Breweries = () => {
     }, []);
   
     return (
-      <div>
-        <h1>San Diego Breweries</h1>
+      <div className="breweries">
         {items.map((item) => (
           <ul key={item.name}>
             <li className="name">{item.name}</li>
